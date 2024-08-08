@@ -16,10 +16,16 @@ const Popularjobs = () => {
         num_pages: 1
     })
 
+    const [selectedJob, setSelectedJob] = useState()
+
+    const handleCardPress = (item) => {
+
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headerTitle}>Popular Jobs</Text>
+                <Text style={styles.headerTitle}>Populares</Text>
                 <TouchableOpacity>
                     <Text style={styles.headerBtn}>Mostrar Todos</Text>
                 </TouchableOpacity>
@@ -36,6 +42,8 @@ const Popularjobs = () => {
                         renderItem={({ item }) => (
                             <PopularJobCard 
                                 item={item}
+                                selectedJob={selectedJob}
+                                handleCardPress={handleCardPress}
                             />
                         )}
                         keyExtractor={item => item?.job_id}
