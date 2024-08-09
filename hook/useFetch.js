@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+// 271bd593admsh4d2a3400bcc231dp1c7679jsncdf0835f74fb
 const useFetch = (endpoint, query) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -10,7 +10,7 @@ const useFetch = (endpoint, query) => {
         method: 'GET',
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
         headers: {
-            'x-rapidapi-key': "271bd593admsh4d2a3400bcc231dp1c7679jsncdf0835f74fb",
+            'x-rapidapi-key': "KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLza",
             'x-rapidapi-host': 'jsearch.p.rapidapi.com'
         },
         params: { ...query }
